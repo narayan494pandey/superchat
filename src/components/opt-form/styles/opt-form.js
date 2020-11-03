@@ -6,8 +6,9 @@ export const Container = styled.div`
     margin-top:20px;
     flex-wrap:wrap;
 
-    @media(max-width:1000px){
+    @media(max-width:700px){
         flex-driction:column;
+        justify-content:center;
     }
 `;
 
@@ -19,14 +20,15 @@ export const Input = styled.input`
     padding:10px;
     height:70px;
     box-sizing:border-box;
+
     @media(max-width:700px){
-        max-width:250px;
+        margin-bottom:10px;
     }
 `;
 
 export const Button = styled.button`
     display:flex;
-   align-items:center;
+    align-items:center;
     height:70px;
     background:#e50914;
     color:white;
@@ -35,6 +37,10 @@ export const Button = styled.button`
     forn-size: 26px;
     border:0;
     cursor:pointer;
+
+    &:hover{
+        background:f40612;
+    }
 
     img{
         margin-left:10px;
