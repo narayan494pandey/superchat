@@ -10,9 +10,6 @@ background:url(${({src}) => (src? `../images/misc/${src}.jpg`:`
 
 `;
 
-export const Frame = styled.div`
-
-`;
 export const Container = styled.div`
 display:flex;
 justify-content:space-between;
