@@ -16,12 +16,15 @@ export function FaqsContainer(){
                 </Accordion.Item>
              ))}
              <OptForm>
-                    <OptForm.Text>Ready to watch? Enter your email to create or restart your membership.</OptForm.Text>
-                    <OptForm.Break />
-                    <OptForm.Input placeholder="Email Address"/>
+                <OptForm.Text>Ready to watch? Enter your email to create or restart your membership.</OptForm.Text>
+                <OptForm.Break /> 
+                <OptForm.Input placeholder="Email Address"/>
                     <OptForm.Button>
                         Try It Now
                     </OptForm.Button>
+                   
+                    
+                    
                    
             </OptForm>
 

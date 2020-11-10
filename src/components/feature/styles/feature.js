@@ -2,7 +2,11 @@ import styled from 'styled-components/macro'
 
 
 export const Container = styled.div`
-
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    padding:165px 45px;
+    align-items:center;
 
 
 `; 
