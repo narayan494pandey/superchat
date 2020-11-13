@@ -20,11 +20,20 @@ export default function Singup() {
     
         return firebase
           .auth()
-          .signUpWithEmailAndPassword(emailAddress, password)
-          .then(() => {
-            history.push(ROUTES.BROWSE);
+          .createUserWithEmailAndPassword(emailAddress, password)
+          .then((result) => {
+            result.user
+            .updateProfile({
+                displayName:firstName,
+                photoURL:Math.floor(Math.random()*5)+1,
+
+            }).then(() =>{
+                history.push(ROUTES.BROWSE);
+            })
+    
           })
           .catch((error) => {
+            setFirstName('');
             setEmailAddress('');
             setPassword('');
             setError(error.message);
@@ -60,6 +69,12 @@ export default function Singup() {
               <Form.Submit disabled={isInvalid} type="submit" data-testid="sign-in">
                 Sign Up
               </Form.Submit>
+              <Form.Text>
+                Already a User? <Form.Link to="/signin">Sign in now.</Form.Link>
+               </Form.Text>
+               <Form.TextSmall>
+                    This page is protected by Google reCAPTCHA to ensure you're not a bot. Learn more.
+                </Form.TextSmall>
             </Form.Base>
           </Form>
         </HeaderContainer>
