@@ -1,6 +1,10 @@
 import React from 'react'
-
-export default function Browse() {
+import {useContent} from '../hooks'
+ export default function Browse() {
+     const {series} = useContent('series');
+     const {films} = useContent('films');
+     console.log(series);
+     console.log(films);
     return (
         <div>
             <p>PLease Browse</p>
