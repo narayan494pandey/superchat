@@ -21,10 +21,7 @@ export function FaqsContainer(){
                 <OptForm.Input placeholder="Email Address"/>
                     <OptForm.Button>
                         Try It Now
-                    </OptForm.Button>
-                   
-                    
-                    
+                    </OptForm.Button>     
                    
             </OptForm>
 
