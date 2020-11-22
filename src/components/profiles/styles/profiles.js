@@ -16,10 +16,7 @@ export const Title = styled.h1`
     font-weight:500;
 
 `;
-export const Item = styled.li`
 
-
-`;
 export const Name = styled.p`
     color:#808080;
     text-overflow:ellipsis;
@@ -42,5 +39,21 @@ export const List= styled.ul`
     margin:0;
     display:flex;
     flex-direction:column;
+
+`;
+export const Item = styled.li`
+    max-width:200px;
+    max-height:200px;
+    list-style-type:none;
+    text-align:center;
+    margin-right:30px;
+
+    &:hover > ${Picture}{
+        border:3px solid white;
+    }
+    &:hover ${Name}{
+        font-weight:bold;
+        color:white;
+    }
 
 `;
