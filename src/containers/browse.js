@@ -3,6 +3,8 @@ import {SelectProfileContainer} from './profiles'
 import {FirebaseContext} from '../context/firebase'
 import {Loading} from '../components';
 import { Header } from '../components';
+import * as ROUTES from '../constants/routes';
+import logo from '../logo.svg';
 export function BrowseContainer({slides}){
     const [profile, setProfile] = useState({});
     const [loading, setLoading] = useState(true);
@@ -17,6 +19,9 @@ export function BrowseContainer({slides}){
         <>
           {loading ?( <Loading src= {user.photoURL} />):(<Loading.ReleaseBody />)}
           <Header src="joker1">
+          <Header.Frame>
+          <Header.Logo to={ROUTES.HOME} src={logo} alt="Netflix" />
+        </Header.Frame>
           <Header.Feature>
           <Header.FeatureCallOut>
             Watch Joker Now
