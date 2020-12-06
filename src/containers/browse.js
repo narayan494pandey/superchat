@@ -7,9 +7,9 @@ import { SelectProfileContainer } from './profiles';
 
 
 export function BrowseContainer({ slides }) {
+  const [searchTerm, setSearchTerm] = useState(' ');
   const [profile, setProfile] = useState({});
   const [loading, setLoading] = useState(true);
-
   const { firebase } = useContext(FirebaseContext);
   const user = firebase.auth().currentUser || {};
 
@@ -35,6 +35,7 @@ export function BrowseContainer({ slides }) {
             </Header.TextLink>
           </Header.Group>
           <Header.Group>
+            <Header.Picture searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
             <Header.Profile>
               <Header.Picture src={user.photoURL} />
               <Header.Dropdown>
@@ -43,7 +44,7 @@ export function BrowseContainer({ slides }) {
                   <Header.TextLink>{user.displayName}</Header.TextLink>
                 </Header.Group>
                 <Header.Group>
-                  <Header.TextLink>Sign out</Header.TextLink>
+                  <Header.TextLink onClick={()=>firebase.auth().signOut()}>Sign out</Header.TextLink>
                 </Header.Group>
               </Header.Dropdown>
             </Header.Profile>

@@ -7,7 +7,7 @@ export const Background = styled.div`
   background: url(${({ src }) => (src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg')}) top left / cover
     no-repeat;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 300px) {
     ${({ dontShowOnSmallViewPort }) => dontShowOnSmallViewPort && `background: none;`}
   }
 `;
@@ -72,7 +72,7 @@ export const Search = styled.div`
     cursor: pointer;
   }
 
-  @media (max-width: 200px) {
+  @media (max-width: 700px) {
     display: none;
   }
 `;
